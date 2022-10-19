@@ -10,5 +10,3 @@ title.addEventListener("mouseleave", function() {
     title.style.color = "blue";
     title.textContent = "gone";
 });
-
-console.dir(title);
