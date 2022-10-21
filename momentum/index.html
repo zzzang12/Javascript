@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Momentum App</title>
 </head>
 <body>
-    <div class="hello">
-        <h1 name="이름">Grab me!</h1>
-    </div>
-    <script src="app.js"></script>
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?">
+        <input type="submit" value="Log In">
+    </form>
+    <h2 id="clock"></h2>
+    <h1 class="hidden" id="greeting"></h1>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
 </body>
-</html>`
+</html>
