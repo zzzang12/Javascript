@@ -8,21 +8,21 @@ const greetingText = document.querySelector("#greeting");
 
 const savedUserName = localStorage.getItem(keyUserName);
 if (savedUserName === null) {
-    input.classList.remove(classHidden);
+  input.classList.remove(classHidden);
 } else {
-    printGreeting();
+  printGreeting();
 }
 
 function printGreeting() {
-    input.classList.add(classHidden);
-    const userName = localStorage.getItem(keyUserName);
-    greetingText.textContent = `Hello ${userName}`;
-    greetingText.classList.remove(classHidden);
+  input.classList.add(classHidden);
+  const userName = localStorage.getItem(keyUserName);
+  greetingText.textContent = `Hello ${userName}`;
+  greetingText.classList.remove(classHidden);
 }
 
-inputSubmit.addEventListener("click", function(event) {
-    event.preventDefault();
-    const userName = inputBox.value;
-    localStorage.setItem(keyUserName, userName);
-    printGreeting();
+inputSubmit.addEventListener("click", function (event) {
+  event.preventDefault();
+  const userName = inputBox.value;
+  localStorage.setItem(keyUserName, userName);
+  printGreeting();
 });
