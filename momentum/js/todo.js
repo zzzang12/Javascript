@@ -6,7 +6,7 @@ const todoList = document.querySelector("#todo-list");
 
 let todos = [];
 if (localStorage.getItem(keyTodos) !== null) {
-  JSON.parse(localStorage.getItem(keyTodos));
+  todos = JSON.parse(localStorage.getItem(keyTodos));
   todos.forEach(createTodoElem);
 }
 
