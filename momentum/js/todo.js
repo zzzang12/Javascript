@@ -4,8 +4,11 @@ const todoForm = document.querySelector("#todo-form");
 const todoInput = todoForm.querySelector("input");
 const todoList = document.querySelector("#todo-list");
 
-let todos = JSON.parse(localStorage.getItem(keyTodos));
-todos.forEach(createTodoElem);
+let todos = [];
+if (localStorage.getItem(keyTodos) !== null) {
+  JSON.parse(localStorage.getItem(keyTodos));
+  todos.forEach(createTodoElem);
+}
 
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
