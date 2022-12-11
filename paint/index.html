@@ -9,6 +9,33 @@
   </head>
   <body>
     <canvas></canvas>
+    <input type="range" id="lineWidthInput" min="1" max="11" value="6" />
+    <div id="colorOptions">
+      <input type="color" id="colorInput" />
+      <div style="background-color: #ffffff" data-color="#ffffff"></div>
+      <div style="background-color: #ecf0f1" data-color="#ecf0f1"></div>
+      <div style="background-color: #bdc3c7" data-color="#bdc3c7"></div>
+      <div style="background-color: #95a5a6" data-color="#95a5a6"></div>
+      <div style="background-color: #7f8c8d" data-color="#7f8c8d"></div>
+      <div style="background-color: #34495e" data-color="#34495e"></div>
+      <div style="background-color: #000000" data-color="#000000"></div>
+      <div style="background-color: #1abc9c" data-color="#1abc9c"></div>
+      <div style="background-color: #2ecc71" data-color="#2ecc71"></div>
+      <div style="background-color: #3498db" data-color="#3498db"></div>
+      <div style="background-color: #9b59b6" data-color="#9b59b6"></div>
+      <div style="background-color: #f1c40f" data-color="#f1c40f"></div>
+      <div style="background-color: #e67e22" data-color="#e67e22"></div>
+      <div style="background-color: #e74c3c" data-color="#e74c3c"></div>
+    </div>
+    <button id="modeButton">Draw</button>
+    <button id="eraseButton">Erase</button>
+    <input type="file" id="fileInput" accept="image/*" />
+    <input
+      type="text"
+      id="textInput"
+      placeholder="Write and double click the canvas"
+    />
+    <button id="saveButton">Save image</button>
     <script src="app.js"></script>
   </body>
 </html>
