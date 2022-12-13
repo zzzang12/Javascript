@@ -4,12 +4,12 @@ const lineWidthInput = document.querySelector('#lineWidthInput');
 const colorInput = document.querySelector('#colorInput');
 const fileInput = document.querySelector('#fileInput');
 const textInput = document.querySelector('#textInput');
-const modeButton = document.querySelector('#modeButton');
+const drawButton = document.querySelector('#drawButton');
+const fillButton = document.querySelector('#fillButton');
 const eraseButton = document.querySelector('#eraseButton');
+const clearButton = document.querySelector('#clearButton');
 const saveButton = document.querySelector('#saveButton');
-const colorOptions = Array.from(
-  document.querySelectorAll('#colorOptions:nth-child(n+2)')
-);
+const colorOptions = Array.from(document.querySelectorAll('#colorOptions div'));
 let isPainting = false;
 let isFilling = false;
 
@@ -73,17 +73,20 @@ colorOptions.forEach((color) =>
   })
 );
 
-modeButton.addEventListener('click', (event) => {
-  if (isFilling) {
-    isFilling = false;
-    modeButton.innerText = 'Draw';
-  } else {
-    isFilling = true;
-    modeButton.innerText = 'Fill';
-  }
+drawButton.addEventListener('click', (event) => {
+  isFilling = false;
+});
+
+fillButton.addEventListener('click', (event) => {
+  isFilling = true;
 });
 
 eraseButton.addEventListener('click', (event) => {
+  changeColor('#ffffff');
+  isFilling = false;
+});
+
+clearButton.addEventListener('click', (event) => {
   changeColor('#ffffff');
   context.fillRect(0, 0, canvas.width, canvas.height);
 });
